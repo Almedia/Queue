@@ -11,7 +11,8 @@ namespace queue.Controllers
     {
         [HttpPost]
         public void SendQueue([FromBody]string body){
-            
+            Queue.Services.SendQueue queue =new Queue.Services.SendQueue();
+            queue.SendMessage();
         }
     }
 }
